@@ -1,8 +1,8 @@
 name: Test Bot for BeepBoop
 description: A simple bot example for Beep Boop
 config:
-- name: AWS_ACCESS_KEY
-  friendly_name: AWS Access Key
-  info: Amazon Web Services access key
+- name: APIAI_ACCESS_KEY
+  friendly_name: API Ai access token
+  info:API AI access key
   type: secret
   global: true
