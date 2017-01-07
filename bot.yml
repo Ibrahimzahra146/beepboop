@@ -3,6 +3,5 @@ description: A simple bot example for Beep Boop
 config:
 - name: APIAI_ACCESS_KEY
   friendly_name: API Ai access token
-  info:API AI access key
   type: secret
   global: true
