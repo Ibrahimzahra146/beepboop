@@ -1,7 +1,10 @@
 var Botkit = require('botkit')
+const apiai = require('apiai');
 
+var APIAI_ACCESS_TOKEN=process.env.APIAI_ACCESS_KEY
 var token = process.env.SLACK_TOKEN
-
+const APIAI_LANG = 'en';
+const apiAiService = apiai(APIAI_ACCESS_TOKEN);
 var controller = Botkit.slackbot({
   // reconnect to Slack RTM when connection goes bad
   retry: Infinity,
@@ -31,5 +34,22 @@ controller.on('bot_channel_join', function (bot, message) {
 })
 
 controller.hears(['hi'], ['ambient', 'direct_message','direct_mention','mention'], function (bot, message) {
-  bot.reply(message, 'Hello Ibrahim.')
+      var name = message.match[1];
+
+    let apiaiRequest = apiAiService.textRequest(name ,
+                {
+                    sessionId: sessionId
+                });
+
+            apiaiRequest.on('response', (response) => {
+                let responseText = response.result.fulfillment.speech;
+                bot.reply(message, responseText);
+
+
+
+            });
+
+
+            apiaiRequest.on('error', (error) => console.error(error));
+            apiaiRequest.end();
 })
