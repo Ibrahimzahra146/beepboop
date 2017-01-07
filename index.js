@@ -1,5 +1,9 @@
 "use strict";
-
+const express = require('express');
+const bodyParser = require('body-parser');
+const request = require('request');
+const JSONbig = require('json-bigint');
+const async = require('async');
 var Botkit = require('botkit')
 const apiai = require('apiai');
 const uuid = require('node-uuid');
