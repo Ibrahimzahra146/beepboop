@@ -7,6 +7,8 @@ var APIAI_ACCESS_TOKEN=process.env.APIAI_ACCESS_KEY
 var token = process.env.SLACK_TOKEN
 const APIAI_LANG = 'en';
 const apiAiService = apiai(APIAI_ACCESS_TOKEN);
+var sessionId = uuid.v1();
+
 var controller = Botkit.slackbot({
   // reconnect to Slack RTM when connection goes bad
   retry: Infinity,
