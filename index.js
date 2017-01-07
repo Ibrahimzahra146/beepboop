@@ -2,6 +2,7 @@
 
 var Botkit = require('botkit')
 const apiai = require('apiai');
+const uuid = require('node-uuid');
 
 var APIAI_ACCESS_TOKEN=process.env.APIAI_ACCESS_KEY
 var token = process.env.SLACK_TOKEN
