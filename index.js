@@ -46,8 +46,8 @@ controller.hears(['hi'], ['ambient', 'direct_message','direct_mention','mention'
     console.log('New request is receuved')
         var stringfy = JSON.stringify(message);
 
-      var name = message.match[1];
-console.log(stringfy);
+      var name = message.text;
+      console.log(stringfy);
     let apiaiRequest = apiAiService.textRequest(name ,
                 {
                     sessionId: sessionId
