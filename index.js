@@ -46,7 +46,7 @@ controller.hears(['hi'], ['ambient', 'direct_message','direct_mention','mention'
     console.log('New request is receuved')
 
       var name = message.match[1];
-
+console.log(name);
     let apiaiRequest = apiAiService.textRequest(name ,
                 {
                     sessionId: sessionId
@@ -56,7 +56,7 @@ controller.hears(['hi'], ['ambient', 'direct_message','direct_mention','mention'
                 let responseText = response.result.fulfillment.speech;
                 bot.reply(message, responseText);
 
-
+conole.log("the response"+responseText);
 
             });
 
