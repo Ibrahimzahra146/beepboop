@@ -56,7 +56,7 @@ console.log(name);
                 let responseText = response.result.fulfillment.speech;
                 bot.reply(message, responseText);
 
-conole.log("the response"+responseText);
+console.log("the response"+responseText);
 
             });
 
