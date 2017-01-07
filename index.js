@@ -1,3 +1,5 @@
+"use strict";
+
 var Botkit = require('botkit')
 const apiai = require('apiai');
 
