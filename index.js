@@ -43,6 +43,8 @@ controller.on('bot_channel_join', function (bot, message) {
 })
 
 controller.hears(['hi'], ['ambient', 'direct_message','direct_mention','mention'], function (bot, message) {
+    console.log('New request is receuved')
+
       var name = message.match[1];
 
     let apiaiRequest = apiAiService.textRequest(name ,
