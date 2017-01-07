@@ -8,6 +8,7 @@
   },
   "dependencies": {
       "apiai": "2.0.5",
+      "node-uuid": "^1.4.7",
     "beepboop-botkit": "^1.4.0",
     "botkit": "~0.1.1"
   }
