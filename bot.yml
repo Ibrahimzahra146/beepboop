@@ -1,4 +1,4 @@
-name:Toffy bot
+name:"Toffy bot"
 description: A simple bot example for Beep Boop
 config:
 - name: APIAI_ACCESS_KEY
