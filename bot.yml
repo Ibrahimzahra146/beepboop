@@ -1,4 +1,4 @@
-name:Test Bot for BeepBoop
+name: Test Bot for BeepBoop
 description: A simple bot example for Beep Boop
 config:
 - name: APIAI_ACCESS_KEY
